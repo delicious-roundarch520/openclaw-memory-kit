@@ -32,6 +32,25 @@ bash install.sh
 
 ---
 
+## Что работает без vectorDB
+
+Для старта **НЕ нужен** OpenAI API ключ. 80% ценности доступно сразу.
+
+**Работает сразу (0 зависимостей):**
+- Шаблоны: BOOTSTRAP.md, MEMORY.md, handoff.md, DO_NOT_DELETE.md
+- Структура memory/ (core, decisions, projects, archive)
+- Кроны: auto-handoff (3x/день), auto-diary (2x/день), night-cleanup (bash)
+- Компактификация с memoryFlush (запись контекста перед сжатием)
+- Скрипты: health-check, consistency-check, archive-old-notes
+
+**Требует OpenAI API ключ (для эмбеддингов):**
+- memory-search.json - векторный поиск по памяти (hybrid: 70% vector + 30% BM25)
+- Консолидатор работает лучше с vectorDB, но функционирует и без него
+
+**Вывод:** начни без vectorDB. Агент будет помнить контекст через handoff, писать дневники, архивировать старое. Когда понадобится поиск по памяти трёхмесячной давности - добавь эмбеддинги.
+
+---
+
 ## Структура репо
 
 ```
@@ -311,6 +330,23 @@ bash install.sh
 ```
 
 The installer checks for OpenClaw, asks for your workspace path, copies templates, creates the memory structure, and installs scripts. **It does NOT modify openclaw.json** - only shows what to add.
+
+## What Works Without vectorDB
+
+You do **NOT** need an OpenAI API key to get started. 80% of the value works out of the box.
+
+**Works immediately (zero dependencies):**
+- Templates: BOOTSTRAP.md, MEMORY.md, handoff.md, DO_NOT_DELETE.md
+- Memory structure (core, decisions, projects, archive)
+- Crons: auto-handoff (3x/day), auto-diary (2x/day), night-cleanup (bash)
+- Compaction with memoryFlush (saves context before compression)
+- Scripts: health-check, consistency-check, archive-old-notes
+
+**Requires OpenAI API key (for embeddings):**
+- memory-search.json - vector search across memory (hybrid: 70% vector + 30% BM25)
+- Consolidator works better with vectorDB but functions without it
+
+**Bottom line:** start without vectorDB. Your agent will remember context via handoff, write daily notes, archive old ones. When you need to search 3-month-old memories - add embeddings.
 
 ## What's Inside
 
