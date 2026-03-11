@@ -34,12 +34,14 @@ gateway config.patch
 - `reserveTokensFloor`: `25000`
 - `maxHistoryShare`: `0.7`
 - `identifierPolicy`: `"strict"`
-- `model`: модель для компактификации (рекомендуется дешёвая, например `"anthropic/claude-sonnet-4-6"`)
+- `model`: модель для компактификации (рекомендуется дешёвая). Примеры: `"anthropic/claude-sonnet-4-6"`, `"openai/gpt-4o-mini"`, `"google/gemini-2.5-flash"` - подставь ту что у тебя настроена
 - `memoryFlush.enabled`: `true`
 - `memoryFlush.softThresholdTokens`: `8000`
 - `memoryFlush.prompt`: скопируй из файла `config/compaction.json` поле `memoryFlush.prompt`
 
 ## Шаг 4. Создай кроны
+
+> **Модель в кронах:** везде указан `anthropic/claude-sonnet-4-6`. Если у тебя другой провайдер - замени на свою модель. Примеры: `openai/gpt-4o-mini`, `google/gemini-2.5-flash`. Используй лёгкую (дешёвую) модель - кроны не требуют мощной.
 
 Создай 3 крона через `cron add`:
 

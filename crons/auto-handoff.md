@@ -48,6 +48,7 @@
     "kind": "agentTurn",
     "message": "Запиши текущий контекст в memory/handoff.md. Формат: ## Тема, ## Решения, ## TODO, ## Файлы, ## Контекст, ## Черновики. Только факты, точные пути, суть решений. Если ничего не происходило - NO_REPLY.",
     "model": "anthropic/claude-sonnet-4-6",
+    "_model_hint": "Замени на свою модель. Примеры: anthropic/claude-sonnet-4-6, openai/gpt-4o-mini, google/gemini-2.5-flash",
     "timeoutSeconds": 120
   },
   "delivery": {

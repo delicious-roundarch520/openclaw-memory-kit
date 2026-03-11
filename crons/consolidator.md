@@ -43,6 +43,7 @@
     "kind": "agentTurn",
     "message": "Еженедельная консолидация. Прочитай daily notes за 7 дней, извлеки паттерны, обнови memory/decisions/ и memory/core/ если есть новое. Проверь MEMORY.md на размер (< 3000 символов). Не перезаписывай - дополняй. Если ничего важного - NO_REPLY.",
     "model": "anthropic/claude-sonnet-4-6",
+    "_model_hint": "Замени на свою модель. Примеры: anthropic/claude-sonnet-4-6, openai/gpt-4o-mini, google/gemini-2.5-flash",
     "timeoutSeconds": 300
   },
   "delivery": {

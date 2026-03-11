@@ -43,6 +43,7 @@
     "kind": "agentTurn",
     "message": "Напиши дневник дня в memory/YYYY-MM-DD.md (текущая дата). Если файл есть - дополни с timestamp. Формат: Что было, Решения, Инсайты. Только факты, max 200 слов. Если ничего - NO_REPLY.",
     "model": "anthropic/claude-sonnet-4-6",
+    "_model_hint": "Замени на свою модель. Примеры: anthropic/claude-sonnet-4-6, openai/gpt-4o-mini, google/gemini-2.5-flash",
     "timeoutSeconds": 120
   },
   "delivery": {
