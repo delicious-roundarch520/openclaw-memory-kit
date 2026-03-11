@@ -20,7 +20,7 @@ for f in MEMORY.md AGENTS.md IDENTITY.md; do
   if [ -f "$WORKSPACE/$f" ]; then
     echo "  ✅ $f"
   else
-    echo "  ❌ $f — НЕ НАЙДЕН!"
+    echo "  ❌ $f - НЕ НАЙДЕН!"
     ERRORS=$((ERRORS+1))
   fi
 done
@@ -37,7 +37,7 @@ if [ -f "$MEMORY_DIR/handoff.md" ]; then
     echo "  ✅ handoff.md актуален (${AGE_HOURS}ч назад)"
   fi
 else
-  echo "  ❌ handoff.md — НЕ НАЙДЕН!"
+  echo "  ❌ handoff.md - НЕ НАЙДЕН!"
   ERRORS=$((ERRORS+1))
 fi
 
@@ -61,7 +61,7 @@ for d in core decisions projects archive/daily; do
     COUNT=$(find "$MEMORY_DIR/$d" -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
     echo "  ✅ memory/$d/ ($COUNT файлов)"
   else
-    echo "  ❌ memory/$d/ — НЕ НАЙДЕНА!"
+    echo "  ❌ memory/$d/ - НЕ НАЙДЕНА!"
     ERRORS=$((ERRORS+1))
   fi
 done
@@ -106,7 +106,7 @@ fi
 echo ""
 echo "================================"
 if [ "$ERRORS" -eq 0 ]; then
-  echo "✅ ALL_HEALTHY — проблем не найдено"
+  echo "✅ ALL_HEALTHY - проблем не найдено"
 else
   echo "⚠️ Найдено проблем: $ERRORS"
 fi
