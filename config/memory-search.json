@@ -1,0 +1,17 @@
+{
+  "_comment": "Настройки векторного поиска. Вставить в openclaw.json → memorySearch",
+  "enabled": true,
+  "sources": ["memory", "sessions"],
+  "experimental": {
+    "sessionMemory": true
+  },
+  "provider": "openai",
+  "model": "text-embedding-3-small",
+  "query": {
+    "hybrid": {
+      "enabled": true,
+      "vectorWeight": 0.7,
+      "textWeight": 0.3
+    }
+  }
+}
