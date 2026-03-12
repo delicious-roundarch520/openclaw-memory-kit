@@ -6,6 +6,18 @@
 
 Ты получил OpenClaw Memory Kit - систему памяти и восстановления контекста. Твоя задача - установить его в текущий workspace. Выполни шаги по порядку.
 
+## ⚠️ ПЕРЕД НАЧАЛОМ - сделай бэкап конфига!
+
+```bash
+cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.backup-$(date +%Y%m%d)
+```
+
+Если что-то пойдёт не так - всегда можно откатить:
+```bash
+cp ~/.openclaw/openclaw.json.backup-* ~/.openclaw/openclaw.json
+openclaw gateway start
+```
+
 ## Шаг 1. Клонируй репозиторий
 
 ```bash

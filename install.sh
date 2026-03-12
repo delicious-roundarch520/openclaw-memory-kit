@@ -15,6 +15,16 @@ if ! command -v openclaw &> /dev/null; then
 fi
 echo "✅ OpenClaw найден: $(which openclaw)"
 
+# 1.5 Бэкап конфига
+CONF="$HOME/.openclaw/openclaw.json"
+if [ -f "$CONF" ]; then
+  BACKUP="$CONF.backup-$(date +%Y%m%d-%H%M%S)"
+  cp "$CONF" "$BACKUP"
+  echo "✅ Бэкап конфига: $BACKUP"
+else
+  echo "⚠️  Конфиг не найден: $CONF"
+fi
+
 # 2. Определяем workspace
 DEFAULT_WS="$HOME/.openclaw/agents/main/agent"
 echo ""
