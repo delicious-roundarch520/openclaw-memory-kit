@@ -127,3 +127,23 @@ ls -la BOOTSTRAP.md
 # Проверь что он в workspace files OpenClaw
 # BOOTSTRAP.md должен лежать в корне workspace агента
 ```
+
+---
+
+## 8. "Auto Handoff пишет пустой handoff / не видит историю сессии"
+
+**Симптом:** Крон Auto Handoff запускается (status: ok), но handoff.md пустой или содержит "нет данных".
+
+**Причина:** Isolated кроны по умолчанию имеют `visibility: "tree"` — видят только свою сессию. Вызов `sessions_history("agent:main:main")` возвращает ошибку доступа.
+
+**Решение:** Добавь в конфиг (`~/.openclaw/openclaw.json`):
+
+```json
+"tools": {
+  "sessions": {
+    "visibility": "agent"
+  }
+}
+```
+
+Перезапусти gateway. Значение `"agent"` разрешает видеть все сессии того же агента.

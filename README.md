@@ -180,6 +180,19 @@ cp scripts/*.sh ~/.openclaw/scripts/
 chmod +x ~/.openclaw/scripts/*.sh
 ```
 
+4. Разреши кронам читать историю сессии:
+
+В `~/.openclaw/openclaw.json` добавь в секцию `tools`:
+```json
+"tools": {
+  "sessions": {
+    "visibility": "agent"
+  }
+}
+```
+
+> ⚠️ **Без этой настройки кроны Auto Handoff и Auto Diary не смогут читать историю основной сессии!** По умолчанию isolated кроны видят только себя (`visibility: "tree"`). Значение `"agent"` разрешает читать сессии того же агента.
+
 ---
 
 ## Настройка кронов

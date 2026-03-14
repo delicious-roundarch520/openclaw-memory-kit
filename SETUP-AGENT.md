@@ -51,6 +51,28 @@ gateway config.patch
 - `memoryFlush.softThresholdTokens`: `8000`
 - `memoryFlush.prompt`: скопируй из файла `config/compaction.json` поле `memoryFlush.prompt`
 
+## Шаг 3.5. Разреши кронам читать историю сессии
+
+Кроны Auto Handoff и Auto Diary работают в isolated режиме. По умолчанию они видят только себя и **не могут** читать историю основной сессии. Нужно разрешить:
+
+```
+gateway config.patch
+```
+
+Путь: `tools.sessions.visibility`. Установи значение `"agent"`:
+
+```json
+{
+  "tools": {
+    "sessions": {
+      "visibility": "agent"
+    }
+  }
+}
+```
+
+> ⚠️ Без этой настройки кроны Auto Handoff и Auto Diary будут запускаться, но не смогут прочитать `sessions_history` основной сессии — результат будет пустым.
+
 ## Шаг 4. Создай кроны
 
 > **Модель в кронах:** везде указан `anthropic/claude-sonnet-4-6`. Если у тебя другой провайдер - замени на свою модель. Примеры: `openai/gpt-4o-mini`, `google/gemini-2.5-flash`. Используй лёгкую (дешёвую) модель - кроны не требуют мощной.
